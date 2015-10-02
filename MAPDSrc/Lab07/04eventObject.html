@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>04eventObject.html</title>	
+		<script>
+		
+           //document.onmousedown=mouseDown;
+          /* function mouseDown(){  //IE  event object
+            // alert(event.screenX+","+event.screenY);
+               alert(event.type);
+               alert(event.button);
+           }
+           
+           function mouseDown(nsevent){  //IE except parameter object firefox        
+               //alert(nsevent.screenX+","+nsevent.screenY);
+              
+               alert(nsevent.type);
+               alert(nsevent.button);
+           }
+          
+           function mouseDown(nsevent){  //IE except parameter object firefox        
+               //alert(nsevent.screenX+","+nsevent.screenY);
+              // var theEvent=nsevent?nsevent:event;
+               var theEvent=nsevent||event;
+               alert(theEvent.type);
+               alert(theEvent.button);
+           }
+           */
+          
+           //document.onkeydown=keyDown;
+           document.onkeypress=keyDown;
+           function keyDown(nsevent){
+               var theEvent=nsevent||window.event;  
+               alert(theEvent.keyCode);             
+               if(theEvent.altKey) alert("ALT");
+               if(theEvent.ctrlKey) alert("CTRL");
+               if(theEvent.shiftKey) alert("SHIFT");
+           }
+           
+          window.onload=function(){
+          	document.getElementById("idbut").onmousedown=XY;
+          };
+          
+           function XY(){
+           		alert("screenX="+event.screenX+"\n"+
+           			  "clientX="+event.clientX+"\n"+
+           			  "offsetX="+event.offsetX);
+			} 
+		</script>	
+	</head>
+	<body>
+		<input type="button" id="idbut" value="button">
+		<p id="idp">
+             <a href="#">some <span id="idspan" >text</span></a>            
+        </p>
+        
+	</body>
+</html>

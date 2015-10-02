@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>02DOM2.html</title>
+		<script>
+		
+		//function CreateElement(){
+			window.onload=function(){
+			// var theDIV = document.getElementById("iddiv");
+// 
+			// var eleP = document.createElement("p");
+			// var txtP = document.createTextNode("Hello World");
+			// eleP.appendChild(txtP);
+//   
+			// theDIV.appendChild(eleP);
+// 
+			// var eleImg = document.createElement("img");
+			// eleImg.setAttribute("src","DOM/DOMImage/rabbit-hat.gif");
+// 
+			// theDIV.appendChild(eleImg);
+			
+			for(var i=1;i<=12;i++){
+				var eleOpt=document.createElement("option");
+				eleOpt.setAttribute("value",i);
+				var eleOptVal=document.createTextNode(i);
+				eleOpt.appendChild(eleOptVal);
+				
+				var selObj=document.getElementById("idselect");
+				selObj.appendChild(eleOpt);
+				
+				document.getElementById("idselect").onchange=
+				function(){ch(this.value);};
+				
+				
+			}
+			
+			var d=new Date(2012,2,0);
+			alert(d);
+		};
+		
+		function ch(x){
+			//alert(x);
+			document.getElementById("idselect").innerHTML="";
+		}
+		</script>
+	</head>
+
+	<body>
+		<div id="iddiv">div</div>
+		<!--
+		<input type="button" value="CreateElement"  onclick="CreateElement();">
+		-->
+		<select>
+			<option value="1">A</option>
+			<option value="2">B</option>
+			<option value="3">C</option>
+		</select>
+		<select id="idselect"></select>
+	</body>
+</html>

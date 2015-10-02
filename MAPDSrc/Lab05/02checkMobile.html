@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>02checkMobile.html</title>	
+		<script>
+			function check(){
+				//alert(document.getElementById("idPhone"));
+				//var thePhoneObj=document.getElementById("idPhone");
+				//var thePhoneVal=thePhoneObj.value;
+				//alert(thePhoneVal);
+				var thePhone=document.getElementById("idPhone").value;
+				//var thePhone=document.getElementsByName("txtPhone")[0].value;
+				//var thePhone=document.myform.idPhone.value;
+				//var thePhone=document.forms[0].idPhone.value;
+				
+				//var thePhone=idPhone.value;
+				//alert(thePhone);
+				//window.alert(typeof(thePhone));  //string
+				if(isNaN(thePhone))
+					window.alert("please input number 0-9!!");
+				else
+					window.alert("Phone="+thePhone);
+					
+			}
+			window.alert("2+3="+(2+3)+"\n"+
+						"'2'+'3'="+('2'+'3')+"\n"+
+						"'2'+3="+'2'+3
+					);	
+		</script>	
+	</head>
+
+	<body>
+		       <form name="myform">
+		Mobile Number:<input type="text" name="txtPhone" id="idPhone" size="10" maxlength="10" value="123"><br>
+		<input type="button" value="check" onclick="check();" ><br>
+		sex:<input type="radio" name="gender">male
+		<input type="radio" name="gender">female
+		<br>
+		hobby:<input type="checkbox" name="hobby">reading
+		<input type="checkbox" name="hobby">game
+		<input type="checkbox" name="hobby">sports
+		</form>
+	</body>
+</html>

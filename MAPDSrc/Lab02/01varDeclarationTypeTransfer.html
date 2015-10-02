@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>01varDeclarationTypeTransfer.html</title>	
+		<script>
+			var a=10;
+			//document.write("a="+a);
+			//document.write(typeof(a));
+			document.write("a="+a+" typeof(a)="+typeof(a)+"<br>");
+			a="abc";
+			document.write("a="+a+" typeof(a)="+typeof(a)+"<br>");
+			var n=null;
+			document.write("n="+n+" typeof(n)="+typeof(n)+"<br>");
+			var u;
+			document.write("u="+u+" typeof(u)="+typeof(u)+"<br>");
+			//object
+			var personal=new Object();
+			personal.name="Jack";
+			personal.age=23;
+			document.write(personal.name+personal["age"]+"<br>");
+			
+			var cars={speed:180,Label:"audi"};
+			document.write(cars.speed+cars["Label"]+"<br>");
+		
+			document.write("parseInt('12.34')="+parseInt('12.34')+"<br>");
+		    document.write("parseInt('a12.34')="+parseInt('a12.34')+"<br>");
+		
+		
+		
+		
+		
+		</script>	
+	</head>
+
+	<body>
+		
+	</body>
+</html>

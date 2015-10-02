@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>03LocalGlobalVar.html</title>
+		<script>
+		/*
+		    var a=100;  //global variable
+			function f(){
+				//var a=10;  //local variable
+				a=10; //global variable
+				document.write("a func in ="+a+"<br>");
+			}
+			document.write("a func out before="+a+"<br>");
+			f();
+			document.write("a func out after="+a+"<br>");
+			*/
+			
+			var a=100;  //global variable
+			function f(){
+				var a=10;  //local variable
+				a=1000; //local variable
+				document.write("a func in ="+a+"<br>");
+			}
+			document.write("a func out before="+a+"<br>");
+			f();
+			document.write("a func out after="+a+"<br>");
+		</script>	
+	</head>
+
+	<body>		
+	</body>
+</html>

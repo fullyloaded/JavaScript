@@ -1,0 +1,46 @@
+* {margin:0;padding:0}
+#allpage {width:1024px;margin:0 auto;}
+
+
+#menu{
+			overflow:auto !important;  /*為了ie7*/
+			overflow /**/:hidden; /*為了ie5*/
+			width:100%;
+			/*width:1000px;*/
+			margin:0px auto;
+			background-color:#66b3ff;
+			border-bottom:3px solid #cccccc;
+			border-top-right-radius:15px;
+			border-top-left-radius:15px;
+			padding-left:0;
+			padding-right:0;
+		}
+		#menu li{
+			float:left;
+			list-style-type:none;
+			width:7em;
+			border-right:0.5px solid #cccccc;
+			border-left:0.5px solid #cccccc;
+		}
+		#menu li a{
+			display:block;
+			width:100%;
+			color:#333333;
+			text-decoration:none;
+		 	text-align:center; 
+		 	line-height:2.5em;
+		}
+		#menu li a:hover{
+			color:white;
+			background-color:blue;
+		}
+		
+		footer {
+			width:100%;
+			line-height:2.5em;
+			text-align:center;
+			color:#ffffff;
+			background-color:#66b3ff;
+			border-bottom-right-radius:15px;
+			border-bottom-left-radius:15px;
+		}

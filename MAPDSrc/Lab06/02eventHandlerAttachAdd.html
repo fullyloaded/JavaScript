@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>02eventHandlerAttachAdd.html</title>	
+		<script>
+            window.onload=function(){
+          
+           if(document.addEventListener){
+				document.addEventListener("click",clickDoc,false);
+				document.getElementById("iddiv1").addEventListener("click",clickDiv1,true);
+				document.getElementById("iddiv2").addEventListener("click",clickDiv2,false);
+			}
+			else{
+	 			document.attachEvent("onclick",clickDoc);  //IE8  bubbling
+	
+			}
+         };
+        
+          
+            function clickDoc(){
+                alert("document");
+            }
+            
+            function clickDiv1(){
+                alert("Div1");
+            }
+            
+            function clickDiv2(){
+                alert("Div2");
+            }
+		</script>	
+	</head>
+
+	<body>
+		<div id="iddiv1">
+			div1
+			<div id="iddiv2">div2</div>
+		</div>
+	</body>
+</html>

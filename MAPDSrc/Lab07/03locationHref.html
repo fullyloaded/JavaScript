@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>02locationHref.html</title>	
+		<script>
+		/*
+		  var linker=new Array();
+		  linker[0]="#";
+		  linker[1]="http://www.iiiedu.org.tw/taipei/";
+		  linker[2]="http://tw.yahoo.com";
+		  linker[3]="http://www.google.com.tw";
+		  function redirect(x){
+		      //alert(x);
+		      location.href=linker[x];
+		  }
+			
+			function redirect(x){
+		      switch(x){
+		      	case 0:location.href="#";break;
+		      	case 1:location.href="http://www.iiiedu.org.tw/taipei/";break;
+		      	case 2:location.href="http://tw.yahoo.com";break;
+		      	case 3:location.href="http://www.google.com.tw";break;
+		      	
+		      }
+		     
+		      
+		     
+		  }*/ 
+		  
+		
+		  with(document){
+		  	with(location){
+		  		write("<pre>");
+		  		writeln("protocol="+protocol);
+		  		writeln("hostname="+hostname);
+		  		writeln("port="+port);
+		  		writeln("host="+host);
+		  		writeln("pathname="+pathname);
+		  		writeln("hash="+hash);
+		  		write("</pre>");
+		 	 }
+		  }
+		</script>	
+	</head>
+
+	<body>
+		<select onchange="redirect(this.selectedIndex);" >
+			<option>selected</option>
+			<option>IIIEDU</option>
+			<option>KIMO</option>
+			<option>GOOGLE</option>			
+		</select>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<a id="bookmark">bookmark...........</a>
+	</body>
+</html>

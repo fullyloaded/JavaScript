@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>01functionMethod.html</title>	
+		<script>
+			//Method 1
+			
+			function fAdd1(a,b){
+				return (a+b);
+			}
+			document.write("fAdd1(10,20)="+fAdd1(10,20)+"<br>");
+			
+			
+			//Method 2 function literal
+			var fAdd2=function(a,b){
+				return(a+b);
+			};
+			/*var fAdd2=fAdd1;*/
+			
+			document.write("fAdd2(20,30)="+fAdd2(20,30)+"<br>");
+			alert(fAdd2);
+			
+			/*
+			//document.write(window.alert);
+			if(window.alertx)  //判斷是否支援此功能
+				alert("true");
+			else
+				alert("false");
+			*/
+		</script>	
+	</head>
+
+	<body>
+		
+	</body>
+</html>
